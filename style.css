@@ -112,6 +112,7 @@ main {
 .input-section {
   flex-direction: column;
   background-color: white;
+  box-shadow: 1px 7px 5px 0px rgba(0,0,0,0.1);
 }
 
 legend {
