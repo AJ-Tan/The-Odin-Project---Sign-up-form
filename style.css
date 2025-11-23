@@ -6,7 +6,14 @@
   padding: 0;
 }
 
+html {
+  
+}
+
 label {
+  color:#3a3a3a;
+  font-weight: 600;
+  letter-spacing: 2px;
   text-transform: uppercase;
 }
 
@@ -38,7 +45,7 @@ main {
   justify-content: space-between;
 
   padding-block-end: 1rem;
-  max-width: 38.5rem;
+  max-width: 616px;
 
   background-image: url(./image/photo-1585202900225-6d3ac20a6962.avif);
   background-repeat: no-repeat;
@@ -76,23 +83,53 @@ main {
   justify-content: center;
 }
 
-
-.description-container, legend {
-  font-size: 1.5rem;
-  font-weight: 500;
+[class$='-container'] {
+  
+  max-width: 60rem;
 }
 
-.input-container, .form-group, .form-row {
+[class$='-section'] {
+  padding: 2rem 3rem;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.description-section, legend {
+  font-size: 2rem;
+  font-weight: 600;
+  word-spacing: 0.1rem;
+}
+
+.input-section, .form-group, .form-row {
   display: flex;
 }
 
-.input-container {
+.input-section {
   flex-direction: column;
-  padding-block: 1rem;
   background-color: white;
 }
+
 .form-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
   padding-block: 0.5rem;
+  max-width: 50rem;
+
+  & > * {
+    flex: 1;
+    max-width: 22rem;
+  }
+}
+
+input:is([type='text'], [type='email'], [type='password']) {
+  border: 1px solid #E5E7EB;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.25rem;
 }
 
 .form-group {
