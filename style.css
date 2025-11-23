@@ -92,16 +92,17 @@ main {
   padding: 2rem 3rem;
 }
 
-.description-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
 .description-section, legend {
   font-size: 2rem;
   font-weight: 600;
   word-spacing: 0.1rem;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-block-end: 2rem;
 }
 
 .input-section, .form-group, .form-row {
@@ -111,6 +112,10 @@ main {
 .input-section {
   flex-direction: column;
   background-color: white;
+}
+
+legend {
+  margin-block-end: 1.5rem;
 }
 
 .form-row {
@@ -145,10 +150,16 @@ input:is([type='text'], [type='tel'], [type='email'], [type='password']) {
 }
 
 .form-group {
+  gap: 0.5rem;
   flex-direction: column;
 }
 
-.btn-create {
+.error-message {
+  display: none;
+  color: rgb(177, 0, 0);
+}
+
+#btn-create {
   background-color: #596D48;
   color: white;
   font: inherit;
@@ -168,6 +179,7 @@ input:is([type='text'], [type='tel'], [type='email'], [type='password']) {
 
 .login-text {
   font-size: 1.1rem;
+  margin-top: 2rem;
 
   a {
     color:#596D48;
