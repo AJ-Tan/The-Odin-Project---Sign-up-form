@@ -126,10 +126,22 @@ main {
   }
 }
 
-input:is([type='text'], [type='email'], [type='password']) {
+input:is([type='text'], [type='tel'], [type='email'], [type='password']) {
   border: 1px solid #E5E7EB;
+  border-radius: 0.3rem;
+  outline:none;
+
   padding: 0.4rem 0.8rem;
   font-size: 1.25rem;
+
+  &:focus {
+    border-color: #0000bb;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.2);
+  }
+
+  &:user-invalid {
+    border-color: red;
+  }
 }
 
 .form-group {
